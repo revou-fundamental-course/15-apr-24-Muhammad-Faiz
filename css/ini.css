@@ -1,1 +1,119 @@
 /* ini css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat', sans-serif;
+}
+
+body{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #fff, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.box{
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+i{
+    font-size: 40px;
+
+}
+.kotak{
+    display: flex;
+}
+#kotak-konversi {
+    background-color: #c9d6ff;
+    background: linear-gradient(to left, #fff, #c9d6ff);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+#kotak-cara {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    width: 360px;
+    max-width: 100%;
+    min-height: 200px;
+}
+
+
+
+.rumus-c{
+    padding-top: 16px;
+}
+
+.rumus-f{
+    padding-top: 16px;
+}
+
+.rumus-c>h4{
+    font-size: 20px;
+}
+.rumus-f>h4{
+    font-size: 20px;
+}
+#header-c{
+    padding-top: 20px;
+}
+#header-f{
+    padding-top: 60px ;
+}
+ .suhu{
+    padding-top: 32px;
+    padding-bottom: 16px;
+ }
+textarea{
+    resize: none;
+    width: 700px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 30px;
+    padding: 6px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.button{
+    display: inline-flex;
+    gap: 5px;
+}
+.btn-convert{
+    font-weight: bold;
+    font-size: 15px;
+    background-color: yellowgreen;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+}
+.btn-reset{
+    font-weight: bold;
+    font-size: 15px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+}
+.btn-reverse{
+    font-weight: bold;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+}

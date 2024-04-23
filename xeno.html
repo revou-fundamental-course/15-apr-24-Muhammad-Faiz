@@ -4,9 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xeno recap session</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/ini.css">
 </head>
 <body>
+    <div class="kotak">
+        <div class="box" id="kotak-konversi">
+            <section class="header-dan-section">
+                <header class="header">
+                    <h1><i class="fa-solid fa-temperature-half"></i>  Konversi Suhu Celcius (&deg;C) dan Fahrenheit (&deg;F)</h1>
+                    <h3>By Xeno</h3>
+                </header>
+            
+                <section class="section-celcius">
+                    <p>Masukan suhu Celcius (&deg;C)</p>
+                </section>
+    
+                <article id="suhu-c">
+                    <h3 class="suhu" id="celcius">Celcius (&deg;C)</h3>
+                    <textarea name="c" id="celcius"></textarea>
+    
+                    <div class="button">
+                        <button class="btn-convert">Convert</button>
+                        <button class="btn-reset">Reset</button>
+                        <button class="btn-reverse">Reverse</button>
+                    </div>
+                </article>
+    
+                
+                <article id="suhu-f">
+                    <h3 class="suhu" id="fahrenheit">Fahrenheit (&deg;F)</h3>
+                    <textarea name="F" id="fahrenheit"></textarea>
+                </article>
+    
+                
+                <article id="kalkulasi-k">
+                    <h3 class="suhu" id="kalkulasi">Cara kalkulasi</h3>
+                    <textarea name="k" id="kalkulasi"></textarea>
+                </article>
+            </section>
+        </div>
+        <div class="box" id="kotak-cara">
+            <h2>Cara konversi :</h2>
+            <div class="box-cara-c">
+                <header id="header-c">
+                    <h3>Celcius (&deg;C) ke Fahrenheit (&deg;F)</h3><hr>                
+                </header>
+    
+                <article class="rumus-c">
+                    <h4>
+                        S <sub>(&deg;F)</sub> = (S <sub>(&deg;C)</sub> &times; 9/5) + 32
+                    </h4>
+                </article>
+            </div>
+            <div class="box-cara-f">
+                <header id="header-f">
+                    <h3>Fahrenheit (&deg;F) ke Celcius (&deg;C)</h3><hr>                
+                </header>
+    
+                <article class="rumus-f">
+                    <h4>
+                        S <sub>(&deg;C)</sub> = (S <sub>(&deg;F)</sub> &times; 5/9) - 32
+                    </h4>
+                </article>
+            </div>
+        </div>
+    </div>
+    
     
 </body>
 </html>
