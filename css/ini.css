@@ -28,9 +28,20 @@ i{
     font-size: 40px;
 
 }
+
 .kotak{
     display: flex;
 }
+
+ 
+#c-f{
+    display: flex;
+}
+
+#f-c{
+    display: none;
+}
+
 #kotak-konversi {
     background-color: #c9d6ff;
     background: linear-gradient(to left, #fff, #c9d6ff);
@@ -51,36 +62,31 @@ i{
     width: 360px;
     max-width: 100%;
     min-height: 200px;
+    height: 225px;
 }
 
 
 
-.rumus-c{
+.rumus{
     padding-top: 16px;
 }
 
-.rumus-f{
-    padding-top: 16px;
-}
-
-.rumus-c>h4{
+.rumus>h4{
     font-size: 20px;
 }
-.rumus-f>h4{
+.rumus>h4{
     font-size: 20px;
 }
-#header-c{
+.header-cara{
     padding-top: 20px;
 }
-#header-f{
-    padding-top: 60px ;
-}
+
  .suhu{
     padding-top: 32px;
     padding-bottom: 16px;
  }
-textarea{
-    resize: none;
+input{
+    
     width: 700px;
     height: 50px;
     border-radius: 8px;
@@ -91,13 +97,14 @@ textarea{
 }
 .button{
     display: inline-flex;
+    margin-top: 5px;
     gap: 5px;
 }
 .btn-convert{
     font-weight: bold;
     font-size: 15px;
-    background-color: yellowgreen;
-    color: white;
+    background-color: #3eff37;
+    color: rgba(69, 68, 68, 0.988);
     padding: 5px;
     border-radius: 8px;
 }
@@ -115,5 +122,6 @@ textarea{
     background-color: black;
     color: white;
     padding: 5px;
+    margin-left: 475px;
     border-radius: 8px;
 }
