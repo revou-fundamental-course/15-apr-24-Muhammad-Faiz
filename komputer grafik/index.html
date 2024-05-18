@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>faiz-bruteforce</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="box-form">
+        <h2><i class="fa-solid fa-chart-line"></i>Algoritma pembentukan garis dengan cara Bruteforce</h2>
+        <h4>By Faiz</h4>
+        <form id="inputForm">
+          <h3>Titik awal (x1,y1)</h3>
+          <label for="x1">x1:</label>
+          <input type="number" id="x1" name="x1" required />
+          <label for="y1">y1:</label>
+          <input type="number" id="y1" name="y1" required />
+
+          <h3>Titik akhir (x2,y2)</h3>
+          <label for="x2">x2:</label>
+          <input type="number" id="x2" name="x2" required />
+          <label for="y2">y2:</label>
+          <input type="number" id="y2" name="y2" required />
+
+          <button type="button" onclick="drawLine()">buat</button>
+          <button id = "reset1" type="button" onclick="resetForm()">reset</button>
+        </form>
+      </div>
+
+      <canvas id="myChart" style="width: 100%; max-width: 600px"></canvas>
+    </div>
+
+    <script src="js/ini.js"></script>
+  </body>
+</html>

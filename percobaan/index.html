@@ -1,0 +1,216 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar Garis dengan Algoritma Brute Force</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f0f0f0;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        form label {
+            margin-right: 10px;
+        }
+        form input {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #0056b3;
+        }
+        canvas {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Input Titik Awal dan Titik Akhir</h2>
+    <form id="inputForm">
+        <label for="x1">x1:</label>
+        <input type="number" id="x1" name="x1" required>
+        <label for="y1">y1:</label>
+        <input type="number" id="y1" name="y1" required>
+        <label for="x2">x2:</label>
+        <input type="number" id="x2" name="x2" required>
+        <label for="y2">y2:</label>
+        <input type="number" id="y2" name="y2" required>
+        <button type="button" onclick="drawLine()">Gambar Garis</button>
+    </form>
+
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+    <script>
+        // Fungsi algoritma brute force untuk menggambar garis
+        function bruteForce(x1, y1, x2, y2) {
+            const xgaris = [];
+            const ygaris = [];
+
+            let m = (y2 - y1) / (x2 - x1);
+            let n = x2 - x1 + 1;
+            let x = x1;
+
+            for (let a = 0; a < n; a++) {
+                let y = m * (x - x1) + y1;
+                xgaris.push(x);
+                ygaris.push(Math.round(y)); // Membulatkan nilai y
+                x = x + 1;
+            }
+
+            return { xgaris, ygaris };
+        }
+
+        function drawLine() {
+            // Mendapatkan nilai input dari pengguna
+            const x1 = parseInt(document.getElementById('x1').value);
+            const y1 = parseInt(document.getElementById('y1').value);
+            const x2 = parseInt(document.getElementById('x2').value);
+            const y2 = parseInt(document.getElementById('y2').value);
+
+            // Memanggil fungsi brute force untuk menghitung titik-titik garis
+            const { xgaris, ygaris } = bruteForce(x1, y1, x2, y2);
+
+            // Menggambar grafik menggunakan Chart.js
+            new Chart("myChart", {
+                type: "line",
+                data: {
+                    labels: xgaris,
+                    datasets: [{
+                        fill: false,
+                        lineTension: 0,
+                        backgroundColor: "rgba(0,0,255,1.0)",
+                        borderColor: "rgba(0,0,255,0.1)",
+                        data: ygaris
+                    }]
+                },
+                options: {
+                    legend: { display: false },
+                    scales: {
+                        yAxes: [{ ticks: { min: 0, max: 16 } }],
+                        xAxes: [{ ticks: { min: 0, max: 20 } }]
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar Garis dengan Algoritma Brute Force</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <h2>Input Titik Awal dan Titik Akhir</h2>
+    <form id="inputForm">
+        <label for="x1">x1:</label>
+        <input type="number" id="x1" name="x1" required>
+        <label for="y1">y1:</label>
+        <input type="number" id="y1" name="y1" required>
+        <label for="x2">x2:</label>
+        <input type="number" id="x2" name="x2" required>
+        <label for="y2">y2:</label>
+        <input type="number" id="y2" name="y2" required>
+        <button type="button" onclick="drawLine()">Gambar Garis</button>
+    </form>
+
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+    <script>
+        // Fungsi algoritma brute force untuk menggambar garis
+        function bruteForce(x1, y1, x2, y2) {
+            const xgaris = [];
+            const ygaris = [];
+
+            let m = (y2 - y1) / (x2 - x1);
+            let n = Math.max(Math.abs(x2 - x1), Math.abs(y2 - y1)) + 1;
+
+            if (Math.abs(m) <= 1) {
+                let x = x1;
+                for (let a = 0; a < n; a++) {
+                    let y = m * (x - x1) + y1;
+                    xgaris.push(x);
+                    ygaris.push(Math.round(y)); // Membulatkan nilai y
+                    x = x + 1;
+                }
+            } else {
+                let y = y1;
+                for (let a = 0; a < n; a++) {
+                    let x = (y - y1) / m + x1;
+                    xgaris.push(Math.round(x)); // Membulatkan nilai x
+                    ygaris.push(y);
+                    y = y + 1;
+                }
+            }
+
+            return { xgaris, ygaris };
+        }
+
+        function drawLine() {
+            // Mendapatkan nilai input dari pengguna
+            const x1 = parseInt(document.getElementById('x1').value);
+            const y1 = parseInt(document.getElementById('y1').value);
+            const x2 = parseInt(document.getElementById('x2').value);
+            const y2 = parseInt(document.getElementById('y2').value);
+
+            // Memanggil fungsi brute force untuk menghitung titik-titik garis
+            const { xgaris, ygaris } = bruteForce(x1, y1, x2, y2);
+
+            // Menggambar grafik menggunakan Chart.js
+            new Chart("myChart", {
+                type: "line",
+                data: {
+                    labels: xgaris,
+                    datasets: [{
+                        fill: false,
+                        lineTension: 0,
+                        backgroundColor: "rgba(0,0,255,1.0)",
+                        borderColor: "rgba(0,0,255,0.1)",
+                        data: ygaris
+                    }]
+                },
+                options: {
+                    legend: { display: false },
+                    scales: {
+                        yAxes: [{ ticks: { min: Math.min(y1, y2), max: Math.max(y1, y2) } }],
+                        xAxes: [{ ticks: { min: Math.min(x1, x2), max: Math.max(x1, x2) } }]
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

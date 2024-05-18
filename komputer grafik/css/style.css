@@ -1,0 +1,70 @@
+body{
+    font-family:'montserrat', sans-serif;
+    background: linear-gradient(to bottom, #fff, #c9d6ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.box{
+    background: linear-gradient(to left, #fff, #c9d6ff);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 700px;
+    padding: 50px;
+}
+
+form{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+h2{
+    margin: 0;
+}
+
+i{
+    margin-right: 5px;
+    font-size: 40px;
+}
+
+h3{
+    margin: 5px;
+}
+
+h4{
+    margin: 0;
+}
+
+input{
+    border-radius: 5px;
+}
+
+button{
+    margin: 10px;
+    height: 30px;
+    width: 60px;
+    background-color:#00cc85 ;
+    border-radius: 10px;
+    border: 1px;
+    color: #fff;
+}
+#reset1{
+    background-color:#ff0000 ;
+     
+}
+canvas{
+    background: linear-gradient(to left, #c9d6ff, #fff);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    height: 400px;
+    padding: 17px;
+}
